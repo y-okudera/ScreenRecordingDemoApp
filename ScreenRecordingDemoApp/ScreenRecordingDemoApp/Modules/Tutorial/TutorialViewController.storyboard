@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XkZ-Ok-jRq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="eAj-ij-XCx">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewController" id="XkZ-Ok-jRq" customClass="TutorialViewController" customModule="ScreenRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGH-8i-I0H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画面録画中..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haF-CB-2ap">
+                                <rect key="frame" x="8" y="438" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-ca-t8T">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tdX-7e-rz4"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="チュートリアル終了"/>
+                                <connections>
+                                    <action selector="tappedTutorialFinishButton:" destination="XkZ-Ok-jRq" eventType="touchUpInside" id="3q0-XF-fNi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zVV-mz-TlY" firstAttribute="trailing" secondItem="hJW-ca-t8T" secondAttribute="trailing" id="DWx-iY-4he"/>
+                            <constraint firstItem="zVV-mz-TlY" firstAttribute="bottom" secondItem="hJW-ca-t8T" secondAttribute="bottom" id="HFu-qJ-Zha"/>
+                            <constraint firstItem="haF-CB-2ap" firstAttribute="leading" secondItem="zVV-mz-TlY" secondAttribute="leading" constant="8" id="IPC-NM-xCG"/>
+                            <constraint firstItem="zVV-mz-TlY" firstAttribute="trailing" secondItem="haF-CB-2ap" secondAttribute="trailing" constant="8" id="OGv-Nz-An9"/>
+                            <constraint firstItem="haF-CB-2ap" firstAttribute="centerY" secondItem="cGH-8i-I0H" secondAttribute="centerY" id="U5v-N3-d7m"/>
+                            <constraint firstItem="hJW-ca-t8T" firstAttribute="leading" secondItem="zVV-mz-TlY" secondAttribute="leading" id="ckA-T7-Vhx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zVV-mz-TlY"/>
+                    </view>
+                    <connections>
+                        <outlet property="screenRecordingStatusLabel" destination="haF-CB-2ap" id="1dW-wp-iKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozt-Yz-JNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="101"/>
+        </scene>
+    </scenes>
+</document>
